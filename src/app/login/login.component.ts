@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { Router } from '@angular/router';
-import { AuthenticationService } from 'src/app/shared/services/auth/authentication.service';
+import { AuthenticationService } from '../services/auth/authentication.service';
 
 
 @Component({
@@ -22,8 +22,6 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
-    // this.router.navigate(['/backoffice']); // borrar cuando se tenga el login
-
     if (this.auth.isAuthenticated()) {
       this.router.navigate(['/dashboard']);
     }

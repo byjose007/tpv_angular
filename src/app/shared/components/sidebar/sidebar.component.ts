@@ -1,4 +1,4 @@
-import { AuthenticationService } from 'src/app/shared/services/auth/authentication.service';
+import { AuthenticationService } from '../../../services/auth/authentication.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({

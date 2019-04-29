@@ -8,9 +8,6 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MenuItems } from './menu-items/menu-items';
 
-
-
-
 @NgModule({
   declarations: [
     HeaderComponent,
