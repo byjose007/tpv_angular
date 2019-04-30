@@ -1,0 +1,36 @@
+<!-- ============================================================== -->
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<aside class="left-sidebar">
+  <!-- Sidebar scroll-->
+  <div class="scroll-sidebar">
+    <!-- Sidebar navigation-->
+    <nav class="sidebar-nav">
+      <ul id="sidebarnav">
+
+
+        <li><a href="javascript:void()" routerLinkActive="active" routerLink="/dashboard">
+            <i class="mdi mdi-chart-line"></i><span>Dashboard</span></a></li>
+        <li><a href="javascript:void()" routerLinkActive="active" routerLink="/products">
+            <i class="mdi mdi-basket"></i><span>Products</span></a></li>
+        <li><a href="javascript:void()" routerLinkActive="active" routerLink="/backoffice/users">
+            <i class="mdi mdi-format-list-bulleted-type"></i><span>Inventory</span></a></li>
+        <li><a href="javascript:void()" routerLinkActive="active" routerLink="/backoffice/users">
+            <i class="mdi mdi-truck-delivery"></i><span>Suppliers</span></a></li>
+        <li><a href="javascript:void()" routerLinkActive="active" routerLink="/backoffice/users">
+            <i class="mdi mdi-bow-tie"></i><span>Employees</span></a></li>
+        <li><a href="javascript:void()" routerLinkActive="active" routerLink="/customers">
+            <i class="mdi mdi-account-multiple"></i><span>Customers</span></a></li>
+        <li><a href="javascript:void()" routerLinkActive="active" routerLink="/backoffice/users">
+            <i class="mdi mdi-bookmark-plus-outline"></i><span>Favorites</span></a></li>
+        <li><a href="javascript:void()" routerLinkActive="active" routerLink="/backoffice/users">
+            <i class="mdi mdi-ticket-percent"></i><span>Discounts</span></a></li>
+
+        <li><a (click)="logout()" routerLinkActive="active" routerLink="/backoffice/users">
+            <i class="mdi mdi-logout-variant"></i><span>Salir</span></a></li>
+        <!-- <li class="nav-devider"></li> -->
+
+      </ul>
+    </nav>
+  </div>
+</aside>
