@@ -77,3 +77,11 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## Dependencies
 
 - npm i mongoose @nestjs/mongoos
+
+## genertate 
+
+``` f
+nest generate module todos 
+nest generate controller todos
+nest generate service todos
+```

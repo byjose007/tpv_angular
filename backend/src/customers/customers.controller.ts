@@ -3,7 +3,7 @@ import { CreateCustomerDTO } from './dto/customer.dto';
 import { Controller, Get, Post, Delete, Put, Body, Param, Res, HttpStatus, UseInterceptors, NotFoundException, Query } from '@nestjs/common';
 import { MorganInterceptor } from 'nest-morgan';
 
-@Controller('customers')
+@Controller('api/v1/customers')
 export class CustomersController {
 
     constructor(private customersService: CustomersService) { }
