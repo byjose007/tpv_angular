@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { CustomersController } from './customers/customers.controller';
 import { CustomersService } from './customers/customers.service';
 import { CustomersModule } from './customers/customers.module';
+import { ProvidersModule } from './providers/providers.module';
 
 
 @Module({
@@ -14,7 +15,8 @@ import { CustomersModule } from './customers/customers.module';
     useFindAndModify: false,
     useCreateIndex: true,
   }),
-    CustomersModule],
+    CustomersModule,
+    ProvidersModule],
   controllers: [AppController, CustomersController],
   providers: [AppService, CustomersService],
 })

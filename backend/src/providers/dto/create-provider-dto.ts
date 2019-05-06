@@ -1,6 +1,6 @@
 import { ApiModelProperty, ApiModelPropertyOptional } from "@nestjs/swagger";
 
-export class CreateCustomerDTO {
+export class CreateProviderDTO {
     @ApiModelProperty()
     readonly name: string;
     @ApiModelProperty()

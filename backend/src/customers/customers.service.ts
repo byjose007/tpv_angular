@@ -6,8 +6,10 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Customer } from './interfaces/customer.interface';
 import { CreateCustomerDTO } from './dto/customer.dto';
 
+
 @Injectable()
 export class CustomersService {
+    
 
     constructor(@InjectModel('Customer') private readonly customerModel: Model<Customer>) { }
 

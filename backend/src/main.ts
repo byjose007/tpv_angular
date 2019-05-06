@@ -7,13 +7,13 @@ async function bootstrap() {
 
   // Swagger
   const options = new DocumentBuilder()
-    .setTitle('Cats example')
-    .setDescription('The cats API description')
+    .setTitle('TPV Management')
+    .setDescription('Tpv API description')
     .setVersion('1.0')
-    .addTag('TPV')
+    .addTag('TPV Management')
     .build();
   const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('api/swagger_doc', app, document);
 
 
   await app.listen(3000);

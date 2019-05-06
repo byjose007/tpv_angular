@@ -2,7 +2,7 @@ import { Document } from 'mongoose';
 // import {User} from '../../shared/interfaces/user.interface';
 
 
-export interface Customer extends Document{
+export interface Provider extends Document{
     readonly name: string;
     readonly email: string;
     readonly city?: string;
