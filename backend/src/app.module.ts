@@ -6,6 +6,7 @@ import { CustomersController } from './customers/customers.controller';
 import { CustomersService } from './customers/customers.service';
 import { CustomersModule } from './customers/customers.module';
 import { ProvidersModule } from './providers/providers.module';
+import { ManagersModule } from './managers/managers.module';
 
 
 @Module({
@@ -16,7 +17,8 @@ import { ProvidersModule } from './providers/providers.module';
     useCreateIndex: true,
   }),
     CustomersModule,
-    ProvidersModule],
+    ProvidersModule,
+    ManagersModule],
   controllers: [AppController, CustomersController],
   providers: [AppService, CustomersService],
 })

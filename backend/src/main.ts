@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import * as bodyParser from 'body-parser';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -13,9 +14,9 @@ async function bootstrap() {
     .addTag('TPV Management')
     .build();
   const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('api/swagger_doc', app, document);
+  SwaggerModule.setup('api/documentation', app, document);
 
-
+  // app.use(bodyParser.json());
   await app.listen(3000);
 }
 bootstrap();

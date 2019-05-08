@@ -16,8 +16,8 @@ export class ProvidersService {
     }
 
     // Get a single Provider
-    async getProvider(providerID: string): Promise<Provider> {
-        const provider = await this.providerModel.findById(providerID);
+    async getProvider(id: string): Promise<Provider> {
+        const provider = await this.providerModel.findById(id);
         return provider;
     }
 
@@ -28,15 +28,15 @@ export class ProvidersService {
     }
 
     // Delete Provider
-    async deleteProvider(providerID: string): Promise<any> {
-        const deletedProvider = await this.providerModel.findByIdAndDelete(providerID);
+    async deleteProvider(id: string): Promise<any> {
+        const deletedProvider = await this.providerModel.findByIdAndDelete(id);
         return deletedProvider;
     }
 
     // Put a single provider
-    async updateProvider(providerID: string, createProviderDTO: CreateProviderDTO): Promise<Provider> {
+    async updateProvider(id: string, createProviderDTO: CreateProviderDTO): Promise<Provider> {
         const updatedProvider = await this.providerModel
-            .findByIdAndUpdate(providerID, createProviderDTO, { new: true });
+            .findByIdAndUpdate(id, createProviderDTO, { new: true });
         return updatedProvider;
     }
 }

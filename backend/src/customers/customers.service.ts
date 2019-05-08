@@ -20,8 +20,8 @@ export class CustomersService {
     }
 
     // Get a single Customer
-    async getCustomer(customerID: string): Promise<Customer> {
-        const customer = await this.customerModel.findById(customerID);
+    async getCustomer(id: string): Promise<Customer> {
+        const customer = await this.customerModel.findById(id);
         return customer;
     }
 
@@ -32,15 +32,15 @@ export class CustomersService {
     }
 
     // Delete Customer
-    async deleteCustomer(customerID: string): Promise<any> {
-        const deletedCustomer = await this.customerModel.findByIdAndDelete(customerID);
+    async deleteCustomer(id: string): Promise<any> {
+        const deletedCustomer = await this.customerModel.findByIdAndDelete(id);
         return deletedCustomer;
     }
 
     // Put a single customer
-    async updateCustomer(customerID: string, createCustomerDTO: CreateCustomerDTO): Promise<Customer> {
+    async updateCustomer(id: string, createCustomerDTO: CreateCustomerDTO): Promise<Customer> {
         const updatedCustomer = await this.customerModel
-            .findByIdAndUpdate(customerID, createCustomerDTO, { new: true });
+            .findByIdAndUpdate(id, createCustomerDTO, { new: true });
         return updatedCustomer;
     }
 
