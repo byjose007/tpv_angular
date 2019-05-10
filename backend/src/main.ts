@@ -4,7 +4,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import * as bodyParser from 'body-parser';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { cors: true });
 
   // Swagger
   const options = new DocumentBuilder()
@@ -17,6 +17,6 @@ async function bootstrap() {
   SwaggerModule.setup('api/documentation', app, document);
 
   // app.use(bodyParser.json());
-  await app.listen(3000);
+  await app.listen(3001);
 }
 bootstrap();
