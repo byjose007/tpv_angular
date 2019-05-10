@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { LoginComponent } from './login/login.component';
 
@@ -15,16 +16,17 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 
-import { ModulesModule } from './modules/modules.module';
 
 // loading spinner
 import { NgxUiLoaderModule, NgxUiLoaderRouterModule } from  'ngx-ui-loader';
+import { DashboarMainComponent } from './modules/dashboard/components/dashboar-main/dashboar-main.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    DashboarMainComponent
 
   ],
   imports: [
@@ -37,11 +39,12 @@ import { NgxUiLoaderModule, NgxUiLoaderRouterModule } from  'ngx-ui-loader';
     ReactiveFormsModule,
     FormsModule,
     // test
-    ModulesModule,
+
 
     //spinner loading
     NgxUiLoaderModule, // import NgxUiLoaderModule
     NgxUiLoaderRouterModule,
+    SharedModule
 
   ],
   providers: [AuthGuard],

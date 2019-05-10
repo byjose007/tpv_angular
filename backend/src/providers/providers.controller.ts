@@ -6,8 +6,8 @@ import {
 import { MorganInterceptor } from 'nest-morgan';
 import { ApiUseTags, ApiResponse } from '@nestjs/swagger';
 
-@ApiUseTags('providers')
-@Controller('api/v1/providers')
+@ApiUseTags('suppliers')
+@Controller('api/v1/suppliers')
 export class ProvidersController {
 
     constructor(private providersService: ProvidersService) { }

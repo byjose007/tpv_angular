@@ -1,1 +1,94 @@
-<div>Dashboard works</div>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+
+<div id="main-wrapper">
+
+    <app-header></app-header>
+  
+    <!-- ============================================================== -->
+  <!-- Left Sidebar - style you can find in sidebar.scss  -->
+  <!-- ============================================================== -->
+  <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+          <ul id="sidebarnav">
+    
+    
+            <li><a href="javascript:void()" routerLinkActive="active" routerLink="/dashboard">
+                <i class="mdi mdi-chart-line"></i><span>Dashboard</span></a></li>
+            <li><a href="javascript:void()" routerLinkActive="active" routerLink="/products">
+                <i class="mdi mdi-basket"></i><span>Products</span></a></li>
+            <li><a href="javascript:void()" routerLinkActive="active" routerLink="/inventory">
+                <i class="mdi mdi-format-list-bulleted-type"></i><span>Inventory</span></a></li>
+            <li><a href="javascript:void()" routerLinkActive="active" routerLink="/suppliers">
+                <i class="mdi mdi-truck-delivery"></i><span>Suppliers</span></a></li>
+            <li><a href="javascript:void()" routerLinkActive="active" routerLink="/employees">
+                <i class="mdi mdi-bow-tie"></i><span>Employees</span></a></li>
+            <li><a href="javascript:void()" routerLinkActive="active" routerLink="/customers">
+                <i class="mdi mdi-account-multiple"></i><span>Customers</span></a></li>
+            <li><a href="javascript:void()" routerLinkActive="active" routerLink="/users">
+                <i class="mdi mdi-bookmark-plus-outline"></i><span>Favorites</span></a></li>
+            <li><a href="javascript:void()" routerLinkActive="active" routerLink="/users">
+                <i class="mdi mdi-ticket-percent"></i><span>Discounts</span></a></li>
+    
+            <li><a (click)="logout()" routerLinkActive="active" routerLink="/users">
+                <i class="mdi mdi-logout-variant"></i><span>Salir</span></a></li>
+            <!-- <li class="nav-devider"></li> -->
+    
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    
+  
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+  
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+  
+            <app-breadcrumbs></app-breadcrumbs>
+  
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+  
+        
+            <router-outlet></router-outlet>
+          
+  
+            <!-- 
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                This is some text within a card block.
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            -->
+            <!-- ============================================================== -->
+            <!-- End Page Content -->
+            <!-- ============================================================== -->
+  
+        </div>
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+  
+  
+    </div>
+    <!-- ============================================================== -->
+    <!-- END Page wrapper  -->
+    <!-- ============================================================== -->
+  
+  </div>
+  

@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  apiURL : 'http://localhost:3001/api/v1',
+  
   firebaseConfig : {
     apiKey: "AIzaSyC93ej6TpSiiEFwvmOw5QYhLCjipjpqBhM",
     authDomain: "virutal-tpv.firebaseapp.com",
