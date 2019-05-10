@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule, FormGroup } from '@angular/forms';
 
-
 // Firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -18,11 +17,14 @@ import { environment } from 'src/environments/environment';
 
 import { ModulesModule } from './modules/modules.module';
 
+// loading spinner
+import { NgxUiLoaderModule, NgxUiLoaderRouterModule } from  'ngx-ui-loader';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
 
   ],
   imports: [
@@ -35,7 +37,11 @@ import { ModulesModule } from './modules/modules.module';
     ReactiveFormsModule,
     FormsModule,
     // test
-    ModulesModule
+    ModulesModule,
+
+    //spinner loading
+    NgxUiLoaderModule, // import NgxUiLoaderModule
+    NgxUiLoaderRouterModule,
 
   ],
   providers: [AuthGuard],
