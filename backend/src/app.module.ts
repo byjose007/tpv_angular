@@ -11,7 +11,7 @@ import { ManagersModule } from './managers/managers.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/tpv-db', {
+    MongooseModule.forRoot('mongodb+srv://admin_mongo:admin123@cluster0-3slxt.mongodb.net/test?retryWrites=true', {
     useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true,
@@ -23,3 +23,6 @@ import { ManagersModule } from './managers/managers.module';
   providers: [AppService, CustomersService],
 })
 export class AppModule {}
+
+
+// MongoDB local 'mongodb://localhost/tpv-db'

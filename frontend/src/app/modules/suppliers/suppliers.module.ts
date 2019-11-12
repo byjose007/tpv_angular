@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SuppliersRoutingModule } from './suppliers-routing.module';
@@ -12,6 +13,7 @@ import { SuppliersService } from './suppliers.service';
   imports: [
     CommonModule,
     SuppliersRoutingModule,
+    ReactiveFormsModule
     // SuppliersService
   ],
   // exports:[SuppliersRComponent, SuppliersCUComponent]
